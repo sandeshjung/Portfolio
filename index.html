@@ -6,108 +6,130 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- 
+  <!--
     - primary meta tags
   -->
-  <title>Sandesh Jung Kunwar | Portfolio</title>
-  <meta name="title" content="Sandesh Jung Kunwar | Portfolio">
-  <meta name="description" content="This is a personal portfolio">
+  <title>Sandesh Jung Kunwar — AI/ML Engineer</title>
+  <meta name="title" content="Sandesh Jung Kunwar — AI/ML Engineer">
+  <meta name="description" content="Portfolio of Sandesh Jung Kunwar — AI/ML engineer working across LLMs, retrieval-augmented generation, agent orchestration and the production systems around them.">
+  <meta name="theme-color" content="#f3ede0">
 
-  <!-- 
+  <!--
+    - open graph
+  -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sandesh Jung Kunwar — AI/ML Engineer">
+  <meta property="og:description" content="AI/ML engineer working across LLMs, retrieval-augmented generation, agent orchestration and the production systems around them.">
+
+  <!--
     - favicon
   -->
-  <link rel="shortcut icon" href="assets/images/j.png" type="image/svg+xml">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
 
-  <!-- 
-    - google font link
+  <!--
+    - font links
   -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./assets/font/font.css">
 
-  <!-- 
+  <!--
     - custom css link
   -->
   <link rel="stylesheet" href="./assets/css/style.css">
 
-  <!-- 
-    - preload images
+  <!--
+    - preload
   -->
   <link rel="preload" as="image" href="./assets/images/hero-banner.jpeg">
-  <link rel="preload" as="image" href="./assets/images/hero-shape-1.png">
-  <link rel="preload" as="image" href="./assets/images/hero-shape-2.png">
 
 </head>
 
 <body id="top">
 
-  <!-- 
-    - #PRELOADER
+  <!--
+    - #SVG SYMBOLS
   -->
 
-  <div class="preloader" data-preloader>
-    <span class="line"></span>
-  </div>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="mark" viewBox="0 0 32 32">
+        <clipPath id="mark-clip">
+          <circle cx="16" cy="16" r="14.4"/>
+        </clipPath>
+        <circle cx="16" cy="16" r="14.4" fill="none" stroke="currentColor" stroke-width="1.6"/>
+        <path class="mark-tide" clip-path="url(#mark-clip)"
+          d="M0 18.6C4.6 13.6 8.4 13.6 12.8 16.8 17.6 20.3 22 20.6 26.4 17.2 29 15.2 30.6 14 32 13.4V32H0Z"
+          fill="currentColor"/>
+      </symbol>
+      <symbol id="arrow-up-right" viewBox="0 0 24 24">
+        <path d="M7 17L17 7M17 7H7m10 0v10" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="arrow-down" viewBox="0 0 24 24">
+        <path d="M12 4v12m0 0l-5-5m5 5l5-5M5 20h14" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="arrow-right" viewBox="0 0 24 24">
+        <path d="M5 12h14m0 0l-6-6m6 6l-6 6" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="arrow-top" viewBox="0 0 24 24">
+        <path d="M12 19V5m0 0l-6 6m6-6l6 6" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="close" viewBox="0 0 24 24">
+        <path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </symbol>
+    </defs>
+  </svg>
 
 
-  <!-- 
+  <!--
     - #HEADER
   -->
 
   <header class="header" data-header>
     <div class="container">
 
-      <a href="#" class="logo">
-        <img src="./assets/images/0000.png" width="84" height="26" alt="logo">
+      <a href="#top" class="logo" aria-label="Sandesh Jung Kunwar — home">
+        <svg class="logo-mark" aria-hidden="true"><use href="#mark"></use></svg>
+        <span class="logo-type">SJK</span>
       </a>
 
       <nav class="navbar" data-navbar>
 
         <div class="navbar-top">
-          <a href="#" class="logo">
-            <img src="./assets/images/0000.png" width="84" height="26" alt="logo">
+          <a href="#top" class="logo" aria-label="Sandesh Jung Kunwar — home">
+            <svg class="logo-mark" aria-hidden="true"><use href="#mark"></use></svg>
+            <span class="logo-type">SJK</span>
           </a>
 
           <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
-            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+            <svg width="16" height="16" aria-hidden="true"><use href="#close"></use></svg>
           </button>
         </div>
 
         <ul class="navbar-list">
-
-          <li>
-            <a href="#home" class="navbar-link" data-nav-link>Home</a>
-          </li>
-
-          <li>
-            <a href="#about" class="navbar-link" data-nav-link>About</a>
-          </li>
-
-         
-
-          <li>
-            <a href="#experience" class="navbar-link" data-nav-link>Experience</a>
-          </li>
-
-          <li>
-            <a href="#education" class="navbar-link" data-nav-link>Education</a>
-          </li>
-
+          <li><a href="#home" class="navbar-link" data-nav-link>Index</a></li>
+          <li><a href="#about" class="navbar-link" data-nav-link>About</a></li>
+          <li><a href="#experience" class="navbar-link" data-nav-link>Experience</a></li>
+          <li><a href="#projects" class="navbar-link" data-nav-link>Projects</a></li>
+          <li><a href="#writing" class="navbar-link" data-nav-link>Writing</a></li>
+          <li><a href="#contact" class="navbar-link" data-nav-link>Contact</a></li>
         </ul>
 
       </nav>
 
-      <a href="#contact" class="btn btn:hover">
-        <span class="span">Contact</span>
+      <div class="header-actions">
+        <a href="./Sandesh_Jung_Kunwar_Resume.pdf" class="btn btn-primary" download>
+          <span>Résumé</span>
+          <svg class="btn-icon" aria-hidden="true"><use href="#arrow-down"></use></svg>
+        </a>
 
-        <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-      </a>
-
-      <button class="nav-open-btn btn:hover" aria-label="open menu" data-nav-toggler>
-        <span class="line line-1"></span>
-        <span class="line line-2"></span>
-      </button>
+        <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+          <span class="line"></span>
+        </button>
+      </div>
 
       <div class="overlay" data-overlay data-nav-toggler></div>
 
@@ -115,611 +137,703 @@
   </header>
 
 
-
   <main>
     <article>
 
-      <!-- 
+      <!--
         - #HERO
       -->
 
-      <div class="hero text-center" id="home">
-        <div class="container">
+      <div class="hero" id="home">
 
-          <div class="banner-outline has-after">
+        <div class="hero-topbar">
+          <span class="eyebrow">Portfolio — Field Note 01</span>
+          <span class="eyebrow eyebrow-r">sandeshjung.com.np</span>
+        </div>
 
-            <div class="hero-banner img-holder has-after" style="--width: 500; --height: 680;" data-tilt>
-              <img src="./assets/images/hero-banner.jpeg" width="500" height="680" alt="Sandesh Jung Kunwar" class="img-cover">
-            </div>
+        <div class="hero-text-zone">
 
-            <span class="span title">Er. Sandesh Jung Kunwar</span>
-
+          <div class="hero-title-col">
+            <h1 class="hero-name">SANDESH<br>JUNG<br>KUNWAR</h1>
+            <p class="hero-subline">Notes on Building Systems for Language, Retrieval &amp; Reasoning</p>
           </div>
 
-          <div class="hero-content">
+          <div class="hero-info">
 
-            <h1 class="h1 title">Modeling the Future: AI Engineering for Your Vision.</h1>
+            <div>
+              <p class="hero-tagline" data-reveal>Building intelligent systems — from model training to production interfaces.</p>
 
-            <div class="wrapper">
-              <a href="https://www.dropbox.com/scl/fi/39rhv4y36x3thof68i3dd/Sandesh-Jung-Kunwar.pdf?rlkey=ob3nw73bvy7fwzibepgtmsgiq&st=u0wwz20r&dl=1" class="btn btn:hover">
-                <span class="span">Download CV</span>
-                <ion-icon name="cloud-download-outline" aria-hidden="true"></ion-icon>
+              <dl class="hero-meta" data-reveal>
+                <div class="meta-row">
+                  <dt>Career</dt>
+                  <dd>2023 — Present</dd>
+                </div>
+                <div class="meta-row">
+                  <dt>Based</dt>
+                  <dd>Kathmandu, Nepal · Remote-first</dd>
+                </div>
+                <div class="meta-row">
+                  <dt>Currently</dt>
+                  <dd>Co-founder, CreatorKhoj — creator × brand collaboration platform</dd>
+                </div>
+                <div class="meta-row">
+                  <dt>Previously</dt>
+                  <dd>Lazarus Studio · Invisible Technologies · Bajra Technologies · Fusemachines</dd>
+                </div>
+              </dl>
+            </div>
+
+            <div class="hero-bottom-row">
+              <span class="hero-signature">S.J.K / 2026</span>
+              <div class="hero-cta">
+                <a href="./Sandesh_Jung_Kunwar_Resume.pdf" class="btn btn-primary" download>
+                  <span>Download Résumé</span>
+                  <svg class="btn-icon" aria-hidden="true"><use href="#arrow-down"></use></svg>
                 </a>
-                  <p class="hero-text">
-                    Know more about me.
-                  </p>
-
+                <a href="#contact" class="btn btn-ghost">
+                  <span>Get in Touch</span>
+                  <svg class="btn-icon" aria-hidden="true"><use href="#arrow-right"></use></svg>
+                </a>
+              </div>
             </div>
 
           </div>
-
-          <img src="./assets/images/hero-shape-1.png" width="559" height="232" alt="shape" class="shape shape-1">
-
-          <img src="./assets/images/hero-shape-2.png" width="1358" height="497" alt="shape" class="shape shape-2">
 
         </div>
+
+        <div class="hero-art-zone" aria-hidden="true">
+
+          <svg class="tide-waves" viewBox="0 0 1440 420" preserveAspectRatio="none">
+            <defs>
+              <filter id="riso" x="-10%" y="-20%" width="120%" height="160%">
+                <feTurbulence type="fractalNoise" baseFrequency="0.006" numOctaves="2" seed="4" result="n"/>
+                <feDisplacementMap in="SourceGraphic" in2="n" scale="9"/>
+              </filter>
+            </defs>
+            <g filter="url(#riso)">
+              <path fill="#1f68b0" opacity="0.4" style="mix-blend-mode:multiply"
+                d="M0 232C150 196 330 264 540 246C760 227 900 176 1120 206C1258 225 1350 254 1440 240L1440 316C1380 326 1300 304 1180 290C960 264 810 307 580 320C340 334 170 276 0 306Z"/>
+              <path fill="#00867c" opacity="0.44" style="mix-blend-mode:multiply"
+                d="M0 292C170 262 340 320 580 306C810 293 960 250 1180 276C1300 290 1380 312 1440 302L1440 370C1395 376 1330 363 1220 354C1000 336 860 366 620 376C380 386 160 342 0 362Z"/>
+              <path fill="#e2643a" opacity="0.42" style="mix-blend-mode:multiply"
+                d="M0 348C160 328 380 372 620 362C860 352 1000 322 1220 340C1330 349 1395 362 1440 356L1440 600L0 600Z"/>
+            </g>
+            <g stroke="#a97a35" fill="none" stroke-width="1.2" opacity="0.7">
+              <path d="M0 292C170 262 340 320 580 306 810 293 960 250 1180 276 1300 290 1380 312 1440 302"/>
+              <path opacity="0.75"
+                d="M0 348C160 328 380 372 620 362 860 352 1000 322 1220 340 1330 349 1395 362 1440 356"/>
+              <path opacity="0.5"
+                d="M0 232C150 196 330 264 540 246 760 227 900 176 1120 206 1258 225 1350 254 1440 240"/>
+            </g>
+          </svg>
+
+          <svg class="tide-dial" viewBox="0 0 300 300" fill="none">
+            <defs>
+              <filter id="wobble" x="-20%" y="-20%" width="140%" height="140%">
+                <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="2" seed="7" result="noise"/>
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="5"/>
+              </filter>
+            </defs>
+            <g filter="url(#wobble)" stroke="#a97a35" stroke-width="1.1">
+              <circle cx="150" cy="150" r="140" opacity="0.5"/>
+              <circle cx="150" cy="150" r="112" opacity="0.62"/>
+              <circle cx="150" cy="150" r="84" opacity="0.76"/>
+              <circle cx="150" cy="150" r="56" opacity="0.88"/>
+              <circle cx="150" cy="150" r="28" opacity="1"/>
+            </g>
+            <g stroke="#a97a35" stroke-width="1.1" opacity="0.8">
+              <line x1="150" y1="2" x2="150" y2="20"/>
+              <line x1="150" y1="280" x2="150" y2="298"/>
+              <line x1="2" y1="150" x2="20" y2="150"/>
+              <line x1="280" y1="150" x2="298" y2="150"/>
+            </g>
+            <circle cx="150" cy="150" r="2.5" fill="#a97a35"/>
+            <g font-family="'JetBrains Mono', monospace" font-size="9" letter-spacing="1.5" fill="#a97a35">
+              <text x="150" y="14" text-anchor="middle">AI</text>
+              <text x="150" y="296" text-anchor="middle">WEB</text>
+              <text x="8" y="153" text-anchor="start">RAG</text>
+              <text x="292" y="153" text-anchor="end">LLM</text>
+            </g>
+          </svg>
+
+          <span class="hero-art-caption">Fig. 01 — Focus Areas / AI Systems, RAG, Agents, Applied Research</span>
+        </div>
+
       </div>
 
 
-
-
-
-      <!-- 
-        - #SERVICE
-      -->
-
-      <section class="service text-center" aria-label="my services" id="service">
-        <div class="container">
-
-          <ul class="service-list">
-
-            <li class="service-item">
-              <div class="service-card">
-
-                <div class="card-icon">
-                  <img src="./assets/images/artificial-intelligence.png" width="80" height="80" loading="lazy"
-                    alt="service icon">
-                </div>
-
-                <h3 class="card-title">
-                  <a href="#">
-                    Artifical <br>
-                    Intelligence
-                  </a>
-                </h3>
-
-              </div>
-            </li>
-
-            <li class="service-item">
-              <div class="service-card">
-
-                <div class="card-icon">
-                  <img src="./assets/images/nlp.png" width="80" height="80" loading="lazy"
-                    alt="service icon">
-                </div>
-
-                <h3 class="card-title">
-                  <a href="#">
-                    Natural Language<br>
-                    Processing
-                  </a>
-                </h3>
-
-              </div>
-            </li>
-
-            <li class="service-item">
-              <div class="service-card">
-
-                <div class="card-icon">
-                  <img src="./assets/images/data-science.png" width="80" height="80" loading="lazy"
-                    alt="service icon">
-                </div>
-
-                <h3 class="card-title">
-                  <a href="#">
-                    Data <br>
-                    Science
-                  </a>
-                </h3>
-
-              </div>
-            </li>
-
-            <li class="service-item">
-              <div class="service-card">
-
-                <div class="card-icon">
-                  <img src="./assets/images/software-development.png" width="80" height="80" loading="lazy"
-                    alt="service icon">
-                </div>
-
-                <h3 class="card-title">
-                  <a href="#">
-                    Software <br>
-                    Engineering
-                  </a>
-                </h3>
-
-              </div>
-            </li>
-
-          </ul>
-
-        </div>
-      </section>
-
-
-      
-
-
-      <!-- 
+      <!--
         - #ABOUT
       -->
 
-      <section class="section about" aria-label="about-me" id="about">
+      <section class="section" aria-labelledby="about-title" id="about">
         <div class="container">
 
-          <div class="tab-container">
-
-            <ul class="tab-btn-list">
-
-              <li class="tab-btn-item">
-                <button class="tab-btn title h6 active" data-tab-btn="about">About Me</button>
-              </li>
-
-              <li class="tab-btn-item">
-                <button class="tab-btn title h6" data-tab-btn="skillset">Skillset</button>
-              </li>
-
-              <li class="tab-btn-item">
-                <button class="tab-btn title h6" data-tab-btn="certificate">Certificates</button>
-              </li>
-
-
-            </ul>
-
-            <div class="tab-content active" data-tab-content="about">
-              <div class="grid-list">
-
-                <figure class="about-banner img-holder" style="--width: ; --height: ;" data-tilt>
-                  <img src="./assets/images/about-banner.jpeg" width="570" height="420" loading="lazy" alt="about banner"
-                    class="img-cover">
-                </figure>
-
-                <div class="about-content">
-
-                  <h2 class="h4 title section-title">
-                    AI Engineer.
-                  </h2>
-
-                  <p class="section-text">
-                    A licensed Computer Engineer with nearly 2 years of experience in Python, Data, NLP, and model optimization. Skilled in developing innovative AI solutions and enhancing model performance. Eager to learn and explore new technologies in the dynamic field of AI.
-                  </p>
-
-                  <ul class="about-list">
-
-                    <li class="about-item">
-                      <p class="list-title">Name</p>
-
-                      <span class="span title h5">Er. Sandesh Jung Kunwar</span>
-                    </li>
-
-                    <li class="about-item">
-                      <p class="list-title">Phone Number</p>
-
-                      <span class="span title h5">+977 984-9912870</span>
-                    </li>
-
-                    <li class="about-item">
-                      <p class="list-title">Email Address</p>
-
-                      <span class="span title h5">sandeshjkunwar@gmail.com</span>
-                    </li>
-
-                    <li class="about-item">
-                      <p class="list-title">Social Network</p>
-
-                      <div class="social-list">
-
-                        <a href="https://github.com/sandeshjung" class="social-link h6" title="Github">Gi.</a>
-                        <a href="https://www.linkedin.com/in/sandeshjung/" class="social-link h6" title="Linkedin">Ln.</a>
-                        <a href="https://medium.com/@sandeshjung" class="social-link h6" title="Medium">Me.</a>
-
-                      </div>
-                    </li>
-
-                  </ul>
-
-                </div>
-
-              </div>
-            </div>
-
-            <div class="tab-content" data-tab-content="skillset">
-              <!-- <div class="grid-list"> -->
-            
-                <div class="skill-content">
-            
-                  <h3 class="h4 title section-title">
-                    Key Technical Skills
-                  </h3>
-            
-                  <ul class="skill-list">
-                    <li>
-                      <div class="skill-wrapper">
-                        <img src="./assets/images/ai-assistant.png" alt="AI Logo" class="skill-logo">
-                        <span class="span">Artificial Intelligence</span>
-                      </div>
-                    </li>
-            
-                    <li>
-                      <div class="skill-wrapper">
-                        <img src="./assets/images/nlp_10306116.png" alt="NLP Logo" class="skill-logo">
-                        <span class="span">Natural Language Processing</span>
-                      </div>
-                    </li>
-            
-                    <li>
-                      <div class="skill-wrapper">
-                        <img src="./assets/images/rag.png" alt="RAG Logo" class="skill-logo">
-                        <span class="span">Retrieval-Augmented Generation</span>
-                      </div>
-                    </li>
-            
-                    <li>
-                      <div class="skill-wrapper">
-                        <img src="./assets/images/deep-learning.png" alt="DL Logo" class="skill-logo">
-                        <span class="span">Deep Learning</span>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="skill-wrapper">
-                        <img src="./assets/images/languages.png" alt="DL Logo" class="skill-logo">
-                        <span class="span">Large Language Models</span>
-                      </div>
-                    </li>
-                       
-                  
-                    <li>
-                      <div class="skill-wrapper">
-                        <img src="./assets/images/pytorch.png" alt="React Logo" class="skill-logo">
-                        <span class="span">Pytorch</span>
-                      </div>
-                    </li>
-                  
-                    <li>
-                      <div class="skill-wrapper">
-                        <img src="./assets/images/pandas.png" alt="React Logo" class="skill-logo">
-                        <span class="span">pandas</span>
-                      </div>
-                    </li>
-
-                    <li>
-                      <div class="skill-wrapper">
-                        <img src="./assets/images/java-script.png" alt="JavaScript Logo" class="skill-logo">
-                        <span class="span">JavaScript</span>
-                      </div>
-                    </li>
-            
-                    <li>
-                      <div class="skill-wrapper">
-                        <img src="./assets/images/html-5.png" alt="HTML Logo" class="skill-logo">
-                        <span class="span">HTML</span>
-                      </div>
-                    </li>
-                    
-                    <li>
-                      <div class="skill-wrapper">
-                        <img src="./assets/images/c-.png" alt="HTML Logo" class="skill-logo">
-                        <span class="span">C/C++</span>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="skill-wrapper">
-                        <img src="./assets/images/database (1).png" alt="HTML Logo" class="skill-logo">
-                        <span class="span">SQL</span>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="skill-wrapper">
-                        <img src="./assets/images/bash.png" alt="HTML Logo" class="skill-logo">
-                        <span class="span">Shell Scripting</span>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="skill-wrapper">
-                        <img src="./assets/images/react.png" alt="HTML Logo" class="skill-logo">
-                        <span class="span">React</span>
-                      </div>
-                    </li>
-                    
-                   
-                  </ul>
-            
-                </div>
-            
-            </div>
-            
-            <div class="tab-content" data-tab-content="certificate">
-              <div class="grid-list">
-                <div class="interview-card img-holder" style="--width: 60; --height: 40;" data-tilt>
-                  <img src="./assets/images/certificate1.png" width="60" height="40" loading="lazy" alt="certificate 1" class="img-cover zoom-image" onclick="openModal(this)">
-                </div>
-                <div class="interview-card img-holder" style="--width: 60; --height: 40;" data-tilt>
-                  <img src="./assets/images/certificate2.png" width="60" height="40" loading="lazy" alt="certificate 2" class="img-cover zoom-image" onclick="openModal(this)">
-                </div>
-                <div class="interview-card img-holder" style="--width: 60; --height: 40;" data-tilt>
-                  <img src="./assets/images/certificate3.png" width="60" height="40" loading="lazy" alt="certificate 3" class="img-cover zoom-image" onclick="openModal(this)">
-                </div>
-              </div>
-            </div>
-            
-            <!-- Modal for zooming the image -->
-            <div id="imageModal" class="modal">
-              <span class="close" onclick="closeModal()">&times;</span>
-              <img class="modal-content" id="modalImage">
-            </div>
-            
-          
-
-      <section class="design-section" id="experience">
-        <h2 class="h2 title">Work Experience</h2>
-        <div class="timeline">
-        
-        <div class="timeline-empty">
-        </div>
-
-        <div class="timeline-middle">
-        <div class="timeline-circle"></div>
-        </div>
-        <div class="timeline-component timeline-content">
-        <h3>Advanced AI Data Trainer - Invisible Technologies</h3>
-        <p>26th March 2024 – Present (Remote)</p>
-        </div>
-        <div class="timeline-component timeline-content">
-        <h3>Associate AI Engineer - Bajra Technologies</h3>
-        <p>Jan 2024 – July 2024 (Kathmandu)</p>
-        </div>
-        <div class="timeline-middle">
-        <div class="timeline-circle"></div>
-        </div>
-        <div class="timeline-empty">
-        </div>
-
-        <div class="timeline-empty">
-        </div>
-
-        <div class="timeline-middle">
-        <div class="timeline-circle"></div>
-        </div>
-        <div class=" timeline-component timeline-content">
-        <h3>AI Fellowship – Fusemachines Pvt. Ltd</h3>
-        <p>Jan 2023 – Jan 2024 (Kathmandu/ Remote)</p>
-        </div>
-          
-        <div class="timeline-component timeline-content">
-          <h3>AI/ML Developer (NLP) - Tech Bettle Technology</h3>
-          <p>June 5, 2023 - December 22, 2023 (Kathmandu)</p>
+          <div class="section-head" data-reveal>
+            <h2 class="section-title" id="about-title">About</h2>
+            <span class="index-no">Index — 02</span>
           </div>
-          <div class="timeline-middle">
-            <div class="timeline-circle"></div>
+
+          <div class="about-grid">
+
+            <div class="about-portrait" data-reveal>
+              <div class="portrait-frame">
+                <span class="portrait-corner tl"></span>
+                <span class="portrait-corner br"></span>
+                <img src="./assets/images/hero-banner.jpeg" width="500" height="667" loading="lazy" alt="Sandesh Jung Kunwar">
+              </div>
+              <p class="portrait-caption">Fig. 02 — Kathmandu, Nepal</p>
             </div>
-            <div class="timeline-empty">
-            </div>
-            <div class="timeline-empty">
-            </div>
-            <div class="timeline-middle">
-              <div class="timeline-circle"></div>
+
+            <div data-reveal>
+              <p class="about-kicker">AI/ML Engineer</p>
+
+              <div class="about-copy">
+                <p>I build AI systems end to end — LLM training and evaluation, retrieval-augmented generation, and agent orchestration — along with the production services and interfaces that carry them.</p>
+                <p>I've built and evaluated code generation agents, multi-agent workflows and RLHF-based model evaluations, and shipped products of my own, including a platform used by 100+ people.</p>
+                <p>What interests me most is the gap between a model that works in a notebook and a system that works in production: retrieval quality, evaluation harnesses, guardrails, and the tooling agents actually run on.</p>
               </div>
 
-              <div class=" timeline-component timeline-content">
-                <h3>Data Science Intern – NIC Asia</h3>
-                <p>Jan 2023 – March 2023 (Kathmandu)</p>
+              <dl class="about-facts">
+                <div class="fact">
+                  <dt>Email</dt>
+                  <dd><a href="mailto:sandeshjkunwar@gmail.com">sandeshjkunwar@gmail.com</a></dd>
                 </div>
+                <div class="fact">
+                  <dt>Phone</dt>
+                  <dd><a href="tel:+9779849912870">+977 984-9912870</a></dd>
+                </div>
+                <div class="fact">
+                  <dt>Location</dt>
+                  <dd>Godawari, Lalitpur, Nepal</dd>
+                </div>
+                <div class="fact">
+                  <dt>Elsewhere</dt>
+                  <dd>
+                    <a href="https://github.com/sandeshjung" target="_blank" rel="noopener noreferrer">GitHub</a> ·
+                    <a href="https://www.linkedin.com/in/sandeshjung/" target="_blank" rel="noopener noreferrer">LinkedIn</a> ·
+                    <a href="https://medium.com/@sandeshjung" target="_blank" rel="noopener noreferrer">Medium</a>
+                  </dd>
+                </div>
+              </dl>
+
+              <div class="focus-row">
+                <div class="focus-item">
+                  <span class="focus-no">01</span>
+                  <h3 class="focus-title">AI Systems</h3>
+                  <p class="focus-text">LLM training, evaluation and RLHF-driven alignment work.</p>
+                </div>
+                <div class="focus-item">
+                  <span class="focus-no">02</span>
+                  <h3 class="focus-title">RAG &amp; Agents</h3>
+                  <p class="focus-text">Retrieval pipelines, LangGraph workflows, multi-agent systems.</p>
+                </div>
+                <div class="focus-item">
+                  <span class="focus-no">03</span>
+                  <h3 class="focus-title">Production Web</h3>
+                  <p class="focus-text">React, FastAPI and the services that put models in front of people.</p>
+                </div>
+                <div class="focus-item">
+                  <span class="focus-no">04</span>
+                  <h3 class="focus-title">Applied Research</h3>
+                  <p class="focus-text">Transformer internals, tokenizers, speech &amp; vision models.</p>
+                </div>
+              </div>
+
+            </div>
+
           </div>
-        </div> 
-        
-        </section>
 
-        <section class="education-section" id="education">
-          <h2 class="h2 title">Education</h2>
-          <div class="horizontal-timeline-education">
-            <div class="horizontal-timeline-component-education">
-              <div class="timeline-circle-education"></div>
-              <div class="horizontal-timeline-content-education">
-                <h3>Bachelor's in Computer Engineering</h3>
-                <p>HCOE, IOE (2018 – 2023)</p>
-              </div>
-            </div>
-            <!-- Add more education components here -->
-            <div class="horizontal-timeline-component-education">
-              <div class="timeline-circle-education"></div>
-              <div class="horizontal-timeline-content-education">
-                <h3>+2 Science</h3>
-                <p>KMC, NEB (2016 – 2018)</p>
-              </div>
-            </div>
-            <div class="horizontal-timeline-component-education">
-              <div class="timeline-circle-education"></div>
-              <div class="horizontal-timeline-content-education">
-                <h3>SLC</h3>
-                <p>St. Xavier's School (2006 - 2016)</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-      <!-- 
-        - #PROJECTS
-      -->
-
-      <section class="section project" aria-label="my latest projects" id="project">
-
-        <ul class="slider-list">
-
-          <li class="slider-item">
-            <div class="project-card text-center">
-
-              <div class="card-banner img-holder has-before" style="--width: 1000; --height: 763;">
-                <img src="./assets/images/project1.png" width="1000" height="763" loading="lazy"
-                  alt="Project poster: Creative & experienced digital design studio" class="img-cover">
-
-                <a href="https://github.com/sandeshjung/ML-Algorithms" class="btn btn:hover" target="_blank" rel="noopener noreferrer">
-                  <span class="span">Github Repository</span>
-
-                  <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-                </a>
-              </div>
-
-              <div class="card-content">
-                <p class="card-subtitle">Machine learning, Deep learning</p>
-
-                <h3 class="title h3">
-                  <a href="#" class="card-title">Machine Learning Mathematics</a>
-                </h3>
-              </div>
-
-            </div>
-          </li>
-
-          <li class="slider-item">
-            <div class="project-card text-center">
-
-              <div class="card-banner img-holder has-before" style="--width: 1000; --height: 763;">
-                <img src="./assets/images/project2.png" width="1000" height="763" loading="lazy"
-                  alt="Project poster: Front End Development & Maintenance" class="img-cover">
-
-                <a href="https://github.com/sandeshjung/eCommerce-Website" class="btn btn:hover" target="_blank" rel="noopener noreferrer">
-                  <span class="span">Github Repository</span>
-
-                  <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-                </a>
-              </div>
-
-              <div class="card-content">
-                <p class="card-subtitle">Full Stack Web Development</p>
-
-                <h3 class="title h3">
-                  <a href="#" class="card-title">E-commerce website</a>
-                </h3>
-              </div>
-
-            </div>
-          </li>
-
-          <li class="slider-item">
-            <div class="project-card text-center">
-
-              <div class="card-banner img-holder has-before" style="--width: 1000; --height: 763;">
-                <img src="./assets/images/project3.jpeg" width="1000" height="763" loading="lazy"
-                  alt="Project poster: Flutter Framework & Warframe Design" class="img-cover">
-
-                <a href="https://github.com/Anuj-Gupta4/satellite-map-to-image" class="btn btn:hover"  target="_blank" rel="noopener noreferrer">
-                  <span class="span">Github Repository</span>
-
-                  <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-                </a>
-              </div>
-
-              <div class="card-content">
-                <p class="card-subtitle">Deep learning, GAN</p>
-
-                <h3 class="title h3">
-                  <a href="#" class="card-title">Satellite Image to Map</a>
-                </h3>
-              </div>
-
-            </div>
-          </li>
-
-          <li class="slider-item">
-            <div class="project-card text-center">
-
-              <!--  -->
-
-              <div class="card-content">
-                <p class="card-subtitle">Web, Product</p>
-
-                <h3 class="title h3">
-                  <a href="#" class="card-title">Full Web Development Project With JavaScript</a>
-                </h3>
-              </div>
-
-            </div>
-          </li>
-
-
-
-        </ul>
-
+        </div>
       </section>
 
 
-      <!-- 
+      <!--
+        - #EXPERIENCE
+      -->
+
+      <section class="section" aria-labelledby="experience-title" id="experience">
+        <div class="container">
+
+          <div class="section-head" data-reveal>
+            <h2 class="section-title" id="experience-title">Work <em>Experience</em></h2>
+            <span class="index-no">Index — 03</span>
+          </div>
+
+          <div class="exp-list">
+
+            <div class="exp-item" data-reveal>
+              <span class="exp-no">01</span>
+              <div>
+                <h3 class="exp-role">Co-founder <span class="company">— CreatorKhoj</span></h3>
+                <p class="exp-meta">Kathmandu, Nepal</p>
+                <ul class="exp-desc">
+                  <li>Co-founded an MVP platform connecting brands with content creators for campaign discovery and collaboration; designed the end-to-end system architecture including auth, campaign management and admin workflows.</li>
+                  <li>Worked closely with creators and brands to gather feedback and prioritize features.</li>
+                  <li>Onboarded 100+ content creators within the first month and facilitated early brand collaborations.</li>
+                </ul>
+              </div>
+              <span class="exp-date">Jan 2026 — Present</span>
+            </div>
+
+            <div class="exp-item" data-reveal>
+              <span class="exp-no">02</span>
+              <div>
+                <h3 class="exp-role">AI Engineer <span class="company">— Lazarus Studio</span></h3>
+                <p class="exp-meta">Contract · Satdobato, Lalitpur</p>
+                <ul class="exp-desc">
+                  <li>Designed and implemented AI agent orchestration for social-media automation using multi-agent workflows, tool calling, structured outputs and state management.</li>
+                  <li>Integrated LLM agents with external services and APIs to automate multi-step tasks, with workflow control and validation throughout.</li>
+                </ul>
+              </div>
+              <span class="exp-date">Feb 2026 — Jun 2026</span>
+            </div>
+
+            <div class="exp-item" data-reveal>
+              <span class="exp-no">03</span>
+              <div>
+                <h3 class="exp-role">Advanced AI Data Trainer <span class="company">— Invisible Technologies</span></h3>
+                <p class="exp-meta">Full-Stack Developer · Remote, United States</p>
+                <ul class="exp-desc">
+                  <li>Delivered prompt-engineered feedback and built targeted datasets and coding tasks to align LLM outputs with full-stack development standards, improving reasoning, code generation and agent performance.</li>
+                  <li>Developed Docker-based execution environments and evaluated AI-powered web development agents (Firebase Studio Prototyper, Jules) through structured coding tasks and human feedback.</li>
+                  <li>Maintained documentation for evolving project scopes and mentored new team members on evaluation techniques.</li>
+                </ul>
+              </div>
+              <span class="exp-date">Mar 2024 — Feb 2026</span>
+            </div>
+
+            <div class="exp-item" data-reveal>
+              <span class="exp-no">04</span>
+              <div>
+                <h3 class="exp-role">AI Annotator <span class="company">— Mindrift (Toloka AI)</span></h3>
+                <p class="exp-meta">Remote · Freelance (Contract)</p>
+                <ul class="exp-desc">
+                  <li>Evaluated LLM outputs using RLHF methodologies and comparative response ranking; assessed AI agent reasoning across multi-step workflows.</li>
+                  <li>Evaluated AI-generated images and videos for realism, consistency and motion quality.</li>
+                </ul>
+              </div>
+              <span class="exp-date">Freelance</span>
+            </div>
+
+            <div class="exp-item" data-reveal>
+              <span class="exp-no">05</span>
+              <div>
+                <h3 class="exp-role">Associate Software Engineer, AI <span class="company">— Bajra Technologies</span></h3>
+                <p class="exp-meta">Kathmandu, Nepal</p>
+                <ul class="exp-desc">
+                  <li>Built reports and API integrations within the Odoo ERP ecosystem for HRMS workflows; boosted an in-house speaker recognition model's accuracy from ~20% to ~86% on 2/3 subsets.</li>
+                  <li>Researched and developed Nepali LLM training and inference pipelines using PyTorch Lightning and Hugging Face, with custom tokenizers and large-scale scraped Nepali text data.</li>
+                  <li>Contributed to an agentic assessment platform using LangGraph; maintained production apps such as Lekhandas (App Store) and mentored new AI team members.</li>
+                </ul>
+              </div>
+              <span class="exp-date">Jan 2024 — Jul 2024</span>
+            </div>
+
+            <div class="exp-item" data-reveal>
+              <span class="exp-no">06</span>
+              <div>
+                <h3 class="exp-role">AI/ML Developer, NLP <span class="company">— Tech Beetle Technology</span></h3>
+                <p class="exp-meta">Kathmandu, Nepal</p>
+                <ul class="exp-desc">
+                  <li>Designed and implemented RAG pipelines, integrating vector retrieval, LLM inference and prompt engineering to improve chatbot accuracy.</li>
+                  <li>Collaborated with clients on LLM-powered chatbots, cutting customer service response time by 30%.</li>
+                </ul>
+              </div>
+              <span class="exp-date">Jun 2023 — Dec 2023</span>
+            </div>
+
+            <div class="exp-item" data-reveal>
+              <span class="exp-no">07</span>
+              <div>
+                <h3 class="exp-role">AI Fellowship <span class="company">— Fusemachines Pvt. Ltd</span></h3>
+                <p class="exp-meta">Kathmandu, Nepal</p>
+                <ul class="exp-desc">
+                  <li>Developed ML models for house price prediction using regression and feature engineering; explored satellite image-to-map conversion using GANs.</li>
+                  <li>Completed NLP and CV coursework, applied to an interactive conversational agent.</li>
+                </ul>
+              </div>
+              <span class="exp-date">Jan 2023 — Jan 2024</span>
+            </div>
+
+            <div class="exp-item" data-reveal>
+              <span class="exp-no">08</span>
+              <div>
+                <h3 class="exp-role">Data Science Intern <span class="company">— NIC Asia, Trade Tower</span></h3>
+                <p class="exp-meta">Kathmandu, Nepal</p>
+                <ul class="exp-desc">
+                  <li>Built an MVP to extract citizenship and driving license information from onboarding documents using neural network architectures.</li>
+                  <li>Conducted business analysis and solution design for banking AI initiatives.</li>
+                </ul>
+              </div>
+              <span class="exp-date">Jan 2023 — Mar 2023</span>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+
+      <!--
+        - #SKILLS
+      -->
+
+      <section class="section" aria-labelledby="skills-title" id="skills">
+        <div class="container">
+
+          <div class="section-head" data-reveal>
+            <h2 class="section-title" id="skills-title">Technical <em>Skills</em></h2>
+            <span class="index-no">Index — 04</span>
+          </div>
+
+          <div class="skills-grid" data-reveal>
+
+            <div>
+              <p class="skill-group-title">AI &amp; Machine Learning</p>
+              <div class="tag-list">
+                <span class="tag">LLMs</span>
+                <span class="tag">RAG</span>
+                <span class="tag">AI Agents</span>
+                <span class="tag">Prompt Engineering</span>
+                <span class="tag">NLP</span>
+                <span class="tag">Deep Learning</span>
+                <span class="tag">Machine Learning</span>
+                <span class="tag">Computer Vision</span>
+                <span class="tag">Speech Recognition</span>
+                <span class="tag">RLHF</span>
+                <span class="tag">LoRA</span>
+                <span class="tag">LangChain</span>
+                <span class="tag">LangGraph</span>
+                <span class="tag">Vector Databases</span>
+              </div>
+            </div>
+
+            <div>
+              <p class="skill-group-title">Languages</p>
+              <div class="tag-list">
+                <span class="tag">Python</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">C</span>
+                <span class="tag">C++</span>
+                <span class="tag">SQL / PL·SQL</span>
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">Shell Scripting</span>
+              </div>
+            </div>
+
+            <div>
+              <p class="skill-group-title">Frameworks &amp; Libraries</p>
+              <div class="tag-list">
+                <span class="tag">PyTorch</span>
+                <span class="tag">Hugging Face Transformers</span>
+                <span class="tag">FastAPI</span>
+                <span class="tag">React</span>
+                <span class="tag">Tailwind CSS</span>
+              </div>
+            </div>
+
+            <div>
+              <p class="skill-group-title">Tools &amp; Platforms</p>
+              <div class="tag-list">
+                <span class="tag">Git</span>
+                <span class="tag">Docker</span>
+                <span class="tag">Linux</span>
+                <span class="tag">macOS</span>
+                <span class="tag">AWS · EC2</span>
+                <span class="tag">AWS · S3</span>
+                <span class="tag">AWS · SageMaker</span>
+                <span class="tag">Selenium</span>
+                <span class="tag">BeautifulSoup</span>
+                <span class="tag">Odoo ERP</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+
+      <!--
+        - #PROJECTS
+      -->
+
+      <section class="section" aria-labelledby="projects-title" id="projects">
+        <div class="container">
+
+          <div class="section-head" data-reveal>
+            <h2 class="section-title" id="projects-title">Selected <em>Projects</em></h2>
+            <span class="index-no">Index — 05</span>
+          </div>
+
+          <div class="project-grid" data-reveal>
+
+            <a class="project-card featured" href="https://github.com/sandeshjung/ai-customer-operations" target="_blank" rel="noopener noreferrer">
+              <div class="project-top">
+                <span class="project-no">01 — Featured</span>
+                <span class="project-link">
+                  <svg class="btn-icon" aria-hidden="true"><use href="#arrow-up-right"></use></svg>
+                </span>
+              </div>
+              <div class="featured-body">
+                <div>
+                  <h3 class="project-title">AI Customer Operations</h3>
+                  <p class="project-desc">An event-driven platform where two LangGraph agents monitor delayed orders and triage support tickets — investigating with tool calls, then either acting automatically or queueing the decision for human approval.</p>
+                </div>
+                <ul class="featured-points">
+                  <li>Hybrid BM25 + vector retrieval fused with reciprocal rank fusion</li>
+                  <li>Prompt-injection guardrails and human-in-the-loop approval</li>
+                  <li>OpenTelemetry tracing, cost accounting and an evaluation harness</li>
+                </ul>
+              </div>
+              <p class="project-tag">FastAPI · LangGraph · Postgres · Redis Streams · Qdrant · Docker</p>
+            </a>
+
+            <a class="project-card" href="https://github.com/sandeshjung?tab=repositories&q=gpt" target="_blank" rel="noopener noreferrer">
+              <div class="project-top">
+                <span class="project-no">02</span>
+                <span class="project-link">
+                  <svg class="btn-icon" aria-hidden="true"><use href="#arrow-up-right"></use></svg>
+                </span>
+              </div>
+              <div>
+                <h3 class="project-title">Reproduce GPT-2</h3>
+                <p class="project-desc">Reimplemented Andrej Karpathy's educational GPT-2 architecture to understand transformer internals and autoregressive training.</p>
+                <p class="project-tag">Transformers · PyTorch</p>
+              </div>
+            </a>
+
+            <a class="project-card" href="https://github.com/sandeshjung?tab=repositories&q=tokenizer" target="_blank" rel="noopener noreferrer">
+              <div class="project-top">
+                <span class="project-no">03</span>
+                <span class="project-link">
+                  <svg class="btn-icon" aria-hidden="true"><use href="#arrow-up-right"></use></svg>
+                </span>
+              </div>
+              <div>
+                <h3 class="project-title">Nepali Tokenizer</h3>
+                <p class="project-desc">Designed and trained custom tokenizers using large-scale Nepali text scraped from online newspapers.</p>
+                <p class="project-tag">NLP · Nepali LLM</p>
+              </div>
+            </a>
+
+            <a class="project-card" href="https://github.com/sandeshjung?tab=repositories&q=grpo" target="_blank" rel="noopener noreferrer">
+              <div class="project-top">
+                <span class="project-no">04</span>
+                <span class="project-link">
+                  <svg class="btn-icon" aria-hidden="true"><use href="#arrow-up-right"></use></svg>
+                </span>
+              </div>
+              <div>
+                <h3 class="project-title">GRPO</h3>
+                <p class="project-desc">A lightweight implementation of Group Relative Policy Optimization for efficient RL-based LLM fine-tuning.</p>
+                <p class="project-tag">RLHF · Fine-tuning</p>
+              </div>
+            </a>
+
+            <a class="project-card" href="https://github.com/sandeshjung?tab=repositories&q=obstacle" target="_blank" rel="noopener noreferrer">
+              <div class="project-top">
+                <span class="project-no">05</span>
+                <span class="project-link">
+                  <svg class="btn-icon" aria-hidden="true"><use href="#arrow-up-right"></use></svg>
+                </span>
+              </div>
+              <div>
+                <h3 class="project-title">Obstacle Detection for the Visually Impaired</h3>
+                <p class="project-desc">Led development of an IoT and computer-vision assistive system using transfer learning.</p>
+                <p class="project-tag">Computer Vision · IoT</p>
+              </div>
+            </a>
+
+            <a class="project-card" href="https://github.com/sandeshjung?tab=repositories&q=machine-learning-foundation" target="_blank" rel="noopener noreferrer">
+              <div class="project-top">
+                <span class="project-no">06</span>
+                <span class="project-link">
+                  <svg class="btn-icon" aria-hidden="true"><use href="#arrow-up-right"></use></svg>
+                </span>
+              </div>
+              <div>
+                <h3 class="project-title">Machine Learning Foundation</h3>
+                <p class="project-desc">A collection of ML notebooks covering mathematical foundations, algorithms and practical experiments.</p>
+                <p class="project-tag">ML · Notebooks</p>
+              </div>
+            </a>
+
+          </div>
+
+        </div>
+      </section>
+
+
+      <!--
+        - #WRITING
+      -->
+
+      <section class="section" aria-labelledby="writing-title" id="writing">
+        <div class="container">
+
+          <div class="section-head" data-reveal>
+            <h2 class="section-title" id="writing-title">Writing <em>&amp; Notes</em></h2>
+            <span class="index-no">Index — 06</span>
+          </div>
+
+          <div class="writing-list" data-reveal>
+
+            <a class="writing-item" href="https://medium.com/@sandeshjung/stop-chasing-the-best-llm-find-the-bottleneck-instead-f1255645648d" target="_blank" rel="noopener noreferrer">
+              <span class="writing-no">01</span>
+              <div class="writing-body">
+                <h3 class="writing-title">Stop Chasing the Best LLM — Find the Bottleneck Instead</h3>
+                <p class="writing-tag">AI Agents · LLMs</p>
+              </div>
+              <span class="writing-date">Jul 2026</span>
+              <svg class="writing-arrow" aria-hidden="true"><use href="#arrow-up-right"></use></svg>
+            </a>
+
+            <a class="writing-item" href="https://medium.com/@sandeshjung/iron-mans-jarvis-is-almost-ready-and-it-explains-the-evolution-of-ai-4a79196c15c6" target="_blank" rel="noopener noreferrer">
+              <span class="writing-no">02</span>
+              <div class="writing-body">
+                <h3 class="writing-title">Iron Man's Jarvis Is Almost Ready — And It Explains the Evolution of AI</h3>
+                <p class="writing-tag">AI · Machine Learning</p>
+              </div>
+              <span class="writing-date">Jul 2026</span>
+              <svg class="writing-arrow" aria-hidden="true"><use href="#arrow-up-right"></use></svg>
+            </a>
+
+            <a class="writing-item" href="https://medium.com/@sandeshjung/building-an-agentic-rag-system-from-scratch-b8b737b6f1bc" target="_blank" rel="noopener noreferrer">
+              <span class="writing-no">03</span>
+              <div class="writing-body">
+                <h3 class="writing-title">Building an Agentic RAG System from Scratch</h3>
+                <p class="writing-tag">AI Agents · Generative AI</p>
+              </div>
+              <span class="writing-date">Jul 2026</span>
+              <svg class="writing-arrow" aria-hidden="true"><use href="#arrow-up-right"></use></svg>
+            </a>
+
+            <a class="writing-item" href="https://medium.com/@sandeshjung/agentic-rag-vs-rag-why-your-retrieval-pipeline-needs-to-start-reasoning-ae34926e895b" target="_blank" rel="noopener noreferrer">
+              <span class="writing-no">04</span>
+              <div class="writing-body">
+                <h3 class="writing-title">Agentic RAG vs. RAG: Why Your Retrieval Pipeline Needs to Start Reasoning</h3>
+                <p class="writing-tag">AI Agents · Chatbots</p>
+              </div>
+              <span class="writing-date">Jul 2026</span>
+              <svg class="writing-arrow" aria-hidden="true"><use href="#arrow-up-right"></use></svg>
+            </a>
+
+            <a class="writing-item" href="https://medium.com/@sandeshjung/functions-in-javascript-5dd0b9a61373" target="_blank" rel="noopener noreferrer">
+              <span class="writing-no">05</span>
+              <div class="writing-body">
+                <h3 class="writing-title">Functions in JavaScript</h3>
+                <p class="writing-tag">JavaScript</p>
+              </div>
+              <span class="writing-date">Jan 2024</span>
+              <svg class="writing-arrow" aria-hidden="true"><use href="#arrow-up-right"></use></svg>
+            </a>
+
+            <a class="writing-item" href="https://medium.com/@sandeshjung/javascript-hoisting-e2363b48620c" target="_blank" rel="noopener noreferrer">
+              <span class="writing-no">06</span>
+              <div class="writing-body">
+                <h3 class="writing-title">JavaScript Hoisting</h3>
+                <p class="writing-tag">JavaScript</p>
+              </div>
+              <span class="writing-date">Jan 2024</span>
+              <svg class="writing-arrow" aria-hidden="true"><use href="#arrow-up-right"></use></svg>
+            </a>
+
+          </div>
+
+          <a href="https://medium.com/@sandeshjung" class="btn btn-ghost writing-all" target="_blank" rel="noopener noreferrer" data-reveal>
+            <span>All writing on Medium</span>
+            <svg class="btn-icon" aria-hidden="true"><use href="#arrow-up-right"></use></svg>
+          </a>
+
+        </div>
+      </section>
+
+
+      <!--
+        - #EDUCATION
+      -->
+
+      <section class="section" aria-labelledby="education-title" id="education">
+        <div class="container">
+
+          <div class="section-head" data-reveal>
+            <h2 class="section-title" id="education-title">Education</h2>
+            <span class="index-no">Index — 07</span>
+          </div>
+
+          <div class="edu-list" data-reveal>
+
+            <div class="edu-item">
+              <div>
+                <h3 class="edu-degree">Bachelor of Engineering, Computer Engineering</h3>
+                <p class="edu-school">Himalaya College of Engineering, Institute of Engineering · IOE Partial Scholarship</p>
+              </div>
+              <span class="edu-date">2018 — 2023</span>
+            </div>
+
+            <div class="edu-item">
+              <div>
+                <h3 class="edu-degree">Higher Secondary Education, Science</h3>
+                <p class="edu-school">Kathmandu Model College, National Examination Board</p>
+              </div>
+              <span class="edu-date">2016 — 2018</span>
+            </div>
+
+            <div class="edu-item">
+              <div>
+                <h3 class="edu-degree">School Leaving Certificate</h3>
+                <p class="edu-school">St. Xavier's School</p>
+              </div>
+              <span class="edu-date">2006 — 2016</span>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+
+      <!--
         - #CONTACT
       -->
 
-      <section class="section contact" aria-label="contact me" id="contact">
+      <section class="section contact" aria-labelledby="contact-title" id="contact">
         <div class="container">
 
-          <h2 class="title h2 section-title">Get In Touch</h2>
+          <span class="eyebrow" data-reveal>Contact — 08</span>
 
-          <div class="contact-content">
+          <h2 class="contact-title" id="contact-title" data-reveal>Let's build something <em>intelligent</em>.</h2>
 
-              <iframe width="600" height="450" frameborder="0" scrolling="no" style="border: 0;" allowfullscreen="" loading="lazy"
-              src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Godawari+(Location)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
-              <a href="https://www.gps.ie/">gps trackers</a></iframe>
+          <a href="mailto:sandeshjkunwar@gmail.com" class="contact-email" data-reveal>
+            sandeshjkunwar@gmail.com
+            <svg class="contact-email-icon" aria-hidden="true"><use href="#arrow-up-right"></use></svg>
+          </a>
 
-            <ul class="contact-list">
-
-              <li class="contact-item">
-
-                <div class="item-icon">
-                  <img src="./assets/images/contact-icon-1.png" width="50" height="50" loading="lazy"
-                    alt="contact icon">
-                </div>
-
-                <div>
-                  <span class="title h6">+977 9849-912870</span>
-
-                </div>
-
-              </li>
-
-              <li class="contact-item">
-
-                <div class="item-icon">
-                  <img src="./assets/images/contact-icon-2.png" width="50" height="50" loading="lazy"
-                    alt="contact icon">
-                </div>
-
-                <div>
-                  <address class="title h6">
-                    Godawari-3, Lalitpur, Nepal
-                  </address>
-                </div>
-
-              </li>
-
-              <li class="contact-item">
-
-                <div class="item-icon">
-                  <img src="./assets/images/contact-icon-3.png" width="50" height="50" loading="lazy"
-                    alt="contact icon">
-                </div>
-
-                <div>
-                  <span class="title h6">sandeshjkunwar@gmail.com</span>
-
-                </div>
-
-              </li>
-
-            </ul>
-
-          </div>
+          <dl class="contact-grid" data-reveal>
+            <div class="fact">
+              <dt>Phone</dt>
+              <dd><a href="tel:+9779849912870">+977 984-9912870</a></dd>
+            </div>
+            <div class="fact">
+              <dt>Location</dt>
+              <dd>Godawari-3, Lalitpur, Nepal</dd>
+            </div>
+            <div class="fact">
+              <dt>GitHub</dt>
+              <dd><a href="https://github.com/sandeshjung" target="_blank" rel="noopener noreferrer">github.com/sandeshjung</a></dd>
+            </div>
+            <div class="fact">
+              <dt>LinkedIn</dt>
+              <dd><a href="https://www.linkedin.com/in/sandeshjung/" target="_blank" rel="noopener noreferrer">in/sandeshjung</a></dd>
+            </div>
+            <div class="fact">
+              <dt>Medium</dt>
+              <dd><a href="https://medium.com/@sandeshjung" target="_blank" rel="noopener noreferrer">@sandeshjung</a></dd>
+            </div>
+          </dl>
 
         </div>
       </section>
@@ -727,45 +841,31 @@
     </article>
   </main>
 
-  <!-- 
+  <!--
     - #FOOTER
   -->
 
   <footer class="footer">
     <div class="container">
 
-      
+      <span class="footer-mark">
+        <svg class="logo-mark" aria-hidden="true"><use href="#mark"></use></svg>
+        © 2026 Sandesh Jung Kunwar
+      </span>
 
       <a href="#top" class="back-top-btn">
-        <span class="span">Back To Top</span>
-
-        <ion-icon name="arrow-up" aria-hidden="true"></ion-icon>
+        <span>Back to top</span>
+        <svg class="btn-icon" aria-hidden="true"><use href="#arrow-top"></use></svg>
       </a>
 
     </div>
   </footer>
 
 
-  <!-- 
-    - #CUSTOM CURSOR
-  -->
-
-  <div class="cursor-dot" data-cursor></div>
-  <div class="cursor-outline" data-cursor></div>
-
-
-
-
-  <!-- 
+  <!--
     - custom js link
   -->
   <script src="./assets/js/script.js"></script>
-
-  <!-- 
-    - ionicon link
-  -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
 

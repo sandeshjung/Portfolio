@@ -1,19 +1,6 @@
 'use strict';
 
-
-
-/**
- * PRELOADER
- */
-
-const preloader = document.querySelector("[data-preloader]");
-
-window.addEventListener("DOMContentLoaded", function () {
-  preloader.classList.add("loaded");
-  document.body.classList.add("loaded");
-});
-
-
+document.documentElement.classList.add("js");
 
 /**
  * add event on multiple elements
@@ -23,7 +10,7 @@ const addEventOnElements = function (elements, eventType, callback) {
   for (let i = 0, len = elements.length; i < len; i++) {
     elements[i].addEventListener(eventType, callback);
   }
-}
+};
 
 
 
@@ -51,124 +38,69 @@ addEventOnElements(navLinks, "click", function () {
 
 
 /**
- * Header active
+ * Header state on scroll
  */
 
 const header = document.querySelector("[data-header]");
 
 window.addEventListener("scroll", function () {
-  header.classList[window.scrollY > 100 ? "add" : "remove"]("active");
+  header.classList[window.scrollY > 60 ? "add" : "remove"]("active");
 });
 
 
 
 /**
- * Element tilt effect
+ * Scroll reveal
  */
 
-const tiltElements = document.querySelectorAll("[data-tilt]");
+const revealElements = document.querySelectorAll("[data-reveal]");
 
-const initTilt = function (event) {
+if ("IntersectionObserver" in window) {
+  const revealObserver = new IntersectionObserver(
+    function (entries, observer) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in-view");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.15, rootMargin: "0px 0px -40px 0px" }
+  );
 
-  /** get tilt element center position */
-  const centerX = this.offsetWidth / 2;
-  const centerY = this.offsetHeight / 2;
-
-  const tiltPosY = ((event.offsetX - centerX) / centerX) * 10;
-  const tiltPosX = ((event.offsetY - centerY) / centerY) * 10;
-
-  this.style.transform = `perspective(1000px) rotateX(${tiltPosX}deg) rotateY(${tiltPosY - (tiltPosY * 2)}deg)`;
-
+  revealElements.forEach(function (el) {
+    revealObserver.observe(el);
+  });
+} else {
+  revealElements.forEach(function (el) {
+    el.classList.add("in-view");
+  });
 }
-
-addEventOnElements(tiltElements, "mousemove", initTilt);
-
-addEventOnElements(tiltElements, "mouseout", function () {
-  this.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg)`;
-});
 
 
 
 /**
- * Tab content
+ * Active nav link on scroll
  */
 
-const tabBtns = document.querySelectorAll("[data-tab-btn]");
-const tabContents = document.querySelectorAll("[data-tab-content]");
+const sections = document.querySelectorAll("main section[id], .hero[id]");
 
-let lastActiveTabBtn = tabBtns[0];
-let lastActiveTabContent = tabContents[0];
+if ("IntersectionObserver" in window && sections.length) {
+  const navObserver = new IntersectionObserver(
+    function (entries) {
+      entries.forEach(function (entry) {
+        const link = document.querySelector(`.navbar-link[href="#${entry.target.id}"]`);
+        if (!link) return;
+        if (entry.isIntersecting) {
+          navLinks.forEach(function (l) { l.classList.remove("active"); });
+          link.classList.add("active");
+        }
+      });
+    },
+    { rootMargin: "-45% 0px -45% 0px" }
+  );
 
-const filterContent = function () {
-
-  if (!(lastActiveTabBtn === this)) {
-
-    lastActiveTabBtn.classList.remove("active");
-    lastActiveTabContent.classList.remove("active");
-
-    this.classList.add("active");
-    lastActiveTabBtn = this;
-
-    const currentTabContent = document.querySelector(`[data-tab-content="${this.dataset.tabBtn}"]`);
-
-    currentTabContent.classList.add("active");
-    lastActiveTabContent = currentTabContent;
-
-  }
-
-}
-
-addEventOnElements(tabBtns, "click", filterContent);
-
-
-
-/**
- * Custom cursor
- */
-
-const cursors = document.querySelectorAll("[data-cursor]");
-const hoveredElements = [...document.querySelectorAll("button"), ...document.querySelectorAll("a")];
-
-window.addEventListener("mousemove", function (event) {
-
-  const posX = event.clientX;
-  const posY = event.clientY;
-
-  /** cursor dot position */
-  cursors[0].style.left = `${posX}px`;
-  cursors[0].style.top = `${posY}px`;
-
-  /** cursor outline position */
-  setTimeout(function () {
-    cursors[1].style.left = `${posX}px`;
-    cursors[1].style.top = `${posY}px`;
-  }, 80);
-
-});
-
-/** add hovered class when mouseover on hoverElements */
-addEventOnElements(hoveredElements, "mouseover", function () {
-  for (let i = 0, len = cursors.length; i < len; i++) {
-    cursors[i].classList.add("hovered");
-  }
-});
-
-/** remove hovered class when mouseout on hoverElements */
-addEventOnElements(hoveredElements, "mouseout", function () {
-  for (let i = 0, len = cursors.length; i < len; i++) {
-    cursors[i].classList.remove("hovered");
-  }
-});
-
-
-function openModal(img) {
-  var modal = document.getElementById("imageModal");
-  var modalImg = document.getElementById("modalImage");
-  modal.style.display = "block";
-  modalImg.src = img.src;
-}
-
-function closeModal() {
-  var modal = document.getElementById("imageModal");
-  modal.style.display = "none";
+  sections.forEach(function (section) {
+    navObserver.observe(section);
+  });
 }
