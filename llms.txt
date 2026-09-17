@@ -1,0 +1,23 @@
+# Sandesh Jung Kunwar
+
+> AI/ML Engineer based in Kathmandu, Nepal. Builds LLM training/evaluation pipelines, retrieval-augmented generation (RAG) systems, AI agents, and the production software that carries them.
+
+## Key facts
+
+- Name: Sandesh Jung Kunwar
+- Role: AI/ML Engineer
+- Location: Lalitpur, Kathmandu Valley, Nepal
+- Currently: Co-founder, CreatorKhoj (creator × brand collaboration platform)
+- Previously: Lazarus Studio, Invisible Technologies, Bajra Technologies, Tech Beetle Technology, Fusemachines, NIC Asia
+- Education: B.E. Computer Engineering, Himalaya College of Engineering (Institute of Engineering)
+- Core skills: LLMs, RAG, AI Agents (LangChain/LangGraph), RLHF, PyTorch, Hugging Face Transformers, FastAPI, React, AWS
+- Contact: sandeshjkunwar@gmail.com
+- Profiles: GitHub https://github.com/sandeshjung · LinkedIn https://www.linkedin.com/in/sandeshjung/ · Medium https://medium.com/@sandeshjung
+
+## About
+
+Sandesh is an AI/ML engineer working across LLM training and evaluation, retrieval-augmented generation, AI agent orchestration, and the production systems and interfaces around them. He has built and evaluated code generation agents, multi-agent workflows, and RLHF-based model evaluations, and has shipped his own full-stack products.
+
+## Pages
+
+- [Portfolio](https://sandeshjung.com.np/): full experience history, selected projects (including AI Customer Operations, an event-driven LangGraph agent platform), technical writing, and contact information.

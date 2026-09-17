@@ -71,6 +71,16 @@ svg { display: block; }
 
 ::selection { background: var(--ink); color: var(--paper); }
 
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 :focus-visible {
   outline: 2px solid var(--terracotta);
   outline-offset: 3px;
@@ -519,8 +529,8 @@ section { position: relative; padding-block: var(--section-space); }
   width: 100%;
   aspect-ratio: 3/4;
   object-fit: cover;
-  object-position: top center;
-  filter: grayscale(1) contrast(1.05);
+  object-position: center 38%;
+  filter: grayscale(1) contrast(0.8) brightness(1.25);
 }
 
 .portrait-corner {
@@ -940,6 +950,53 @@ section { position: relative; padding-block: var(--section-space); }
 .edu-degree { font-family: var(--font-serif); font-size: clamp(1.05rem, 1.8vw, 1.3rem); }
 .edu-school { font-size: 0.88rem; color: var(--ink-soft); margin-top: 0.25rem; }
 .edu-date { font-family: var(--font-mono); font-size: 0.75rem; color: var(--ink-faint); white-space: nowrap; }
+
+/*-----------------------------------*\
+  #FAQ
+\*-----------------------------------*/
+
+.faq-list { display: flex; flex-direction: column; }
+
+.faq-item {
+  border-top: 1px solid var(--line);
+  padding-block: clamp(1.2rem, 2.4vw, 1.6rem);
+}
+.faq-item:first-child { border-top: none; }
+.faq-item:last-child { border-bottom: 1px solid var(--line); }
+
+.faq-question {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1.5rem;
+  font-family: var(--font-serif);
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  transition: color 0.25s ease;
+}
+.faq-question::-webkit-details-marker { display: none; }
+
+.faq-question::after {
+  content: "+";
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  color: var(--gold);
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+.faq-item[open] .faq-question::after { transform: rotate(45deg); }
+
+.faq-item:hover .faq-question { color: var(--terracotta); }
+
+.faq-answer {
+  margin-top: 0.9rem;
+  max-width: 62ch;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+}
+.faq-answer a { border-bottom: 1px solid var(--line-strong); }
+.faq-answer a:hover { color: var(--terracotta); border-color: var(--terracotta); }
 
 /*-----------------------------------*\
   #CONTACT / FOOTER

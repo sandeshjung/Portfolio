@@ -1,0 +1,21 @@
+{
+  "name": "Sandesh Jung Kunwar — AI/ML Engineer",
+  "short_name": "SJK",
+  "description": "Portfolio of Sandesh Jung Kunwar, an AI/ML engineer based in Kathmandu, Nepal.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#f3ede0",
+  "theme_color": "#f3ede0",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/assets/images/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

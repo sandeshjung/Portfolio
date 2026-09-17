@@ -104,3 +104,18 @@ if ("IntersectionObserver" in window && sections.length) {
     navObserver.observe(section);
   });
 }
+
+
+
+/**
+ * FAQ accordion — only one item open at a time
+ */
+
+const faqItems = document.querySelectorAll(".faq-item");
+
+addEventOnElements(faqItems, "toggle", function () {
+  if (!this.open) return;
+  faqItems.forEach(function (item) {
+    if (item !== this) item.open = false;
+  }, this);
+});
