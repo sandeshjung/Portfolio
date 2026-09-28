@@ -1,0 +1,52 @@
+name: Sync blog from Medium
+
+on:
+  schedule:
+    - cron: '*/30 * * * *' # every 30 min — Medium has no webhooks, so poll its feed
+  workflow_dispatch: # "Run workflow" button to publish a new post right away
+
+permissions:
+  contents: write # commit the regenerated pages
+  pages: write # request a Pages rebuild after committing
+  actions: write # keep this scheduled workflow from being auto-disabled
+
+concurrency:
+  group: sync-blog
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Build blog pages from the Medium feed
+        run: node scripts/build-blog.mjs
+
+      - name: Commit and publish changes
+        run: |
+          if git diff --quiet && [ -z "$(git ls-files --others --exclude-standard)" ]; then
+            echo "Blog already up to date."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A blog index.html sitemap.xml
+          git commit -m "Sync blog from Medium"
+          git push
+          # pushes made with GITHUB_TOKEN don't reliably trigger a Pages
+          # build, so ask for one explicitly
+          gh api --method POST "repos/${{ github.repository }}/pages/builds" || echo "::warning::Pages build request failed"
+
+      # GitHub disables scheduled workflows after 60 days without repo
+      # activity; re-enabling on every run keeps the sync alive through
+      # quiet stretches with no new posts.
+      - name: Keep schedule alive
+        if: always()
+        run: gh workflow enable sync-blog.yml --repo "${{ github.repository }}" || true
